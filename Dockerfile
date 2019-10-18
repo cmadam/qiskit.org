@@ -1,14 +1,14 @@
 FROM node:12-alpine
 
-RUN mkdir /myapp
-WORKDIR /myapp
+# RUN mkdir /myapp
+# WORKDIR /myapp
 
-COPY package-lock.json /myapp/package-lock.json
-COPY package.json /myapp/package.json
+# COPY package-lock.json /myapp/package-lock.json
+# COPY package.json /myapp/package.json
 
-RUN npm install
+# RUN npm install
 
-RUN mkdir /myapp/server
+RUN mkdir -p /myapp/server
 WORKDIR /myapp/server
 
 COPY server/package-lock.json /myapp/server/package-lock.json
