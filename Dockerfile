@@ -8,13 +8,13 @@ COPY package.json /myapp/package.json
 
 RUN npm install
 
-RUN mkdir /myapp/server
-WORKDIR /myapp/server
+# RUN mkdir /myapp/server
+# WORKDIR /myapp/server
 
-COPY server/package-lock.json /myapp/server/package-lock.json
-COPY server/package.json /myapp/server/package.json
+# COPY server/package-lock.json /myapp/server/package-lock.json
+# COPY server/package.json /myapp/server/package.json
 
-RUN npm install
+# RUN npm install
 
 
 EXPOSE 3000
